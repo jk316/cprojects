@@ -2,7 +2,7 @@
 using namespace std;
 #define MAX 1000
 
-//设计联系人结构体
+
 struct Person
 {
     string name;
@@ -12,7 +12,6 @@ struct Person
     string addr;
 };
 
-//设计通讯录结构体
 struct Addressbook
 {
     struct Person personArray[MAX];    
@@ -23,26 +22,25 @@ struct Addressbook
 // show menu
 void showMenu(){
 
-    cout<<"1：添加联系人"<<endl;
-    cout<<"2：显示联系人"<<endl;
-    cout<<"3：修改联系人"<<endl;
-    cout<<"4：删除联系人"<<endl;
-    cout<<"5：查找联系人"<<endl;
-    cout<<"6：清空联系人"<<endl;
-    cout<<"7：退出联系人"<<endl;
+    cout<<"1 add person"<<endl;
+    cout<<"2 show person"<<endl;
+    cout<<"3 edit person"<<endl;
+    cout<<"4 delete person"<<endl;
+    cout<<"5 find person"<<endl;
+    cout<<"6 clear person"<<endl;
+    cout<<"7 exit"<<endl;
     
 }
 
 
 void addPerson(Addressbook * ads){
-    //增加联系人，修改实参
-    //先判断通讯录是否已经满了
+   
     if (ads->size > MAX){
-        cout<<"通讯录满了"<<endl;
+        cout<<"?"<<endl;
     }
     else{
         string name;
-        cout << "请输入姓名"<<endl;
+        cout << ""<<endl;
         cin >> name;
         ads->personArray[ads->size].name;
     }
@@ -58,7 +56,7 @@ int main(){
 
     while(true){
         showMenu();
-        cout<<"请选择"<<endl;
+        cout<<""<<endl;
         cin>>select;
         switch (select)
         {
